@@ -14,6 +14,8 @@ CREATE TABLE IF NOT EXISTS questions (
     question_text TEXT NOT NULL,
     model_answer TEXT,
     asked_at DATETIME NOT NULL,
+    source TEXT,
+    end_effective_date DATETIME,
     created_by TEXT,
     FOREIGN KEY (created_by) REFERENCES users(id)
 );
